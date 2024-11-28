@@ -1,0 +1,14 @@
+{
+  "properties": [
+    {
+      "name": "api.issue.host",
+      "type": "java.lang.String",
+      "description": "if-token-system : 도메인 정보"
+    },
+    {
+      "name": "api.issue.path.token.validate",
+      "type": "java.lang.String",
+      "description": "if-token-system : 토큰 검증"
+    }
+  ]
+}
