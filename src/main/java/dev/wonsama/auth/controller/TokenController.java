@@ -42,7 +42,7 @@ public class TokenController {
   public CreateTokenVerifyResDto createTokenVerify(@Valid @RequestBody CreateTokenVerifyReqDto dto,
       BindingResult bindingResult) {
 
-    log.info("2.3. /api/auth/token/verify : ", ToStringBuilder.reflectionToString(dto));
+    log.info("🟢 3.1. /api/auth/token/verify : ", ToStringBuilder.reflectionToString(dto));
 
     if (bindingResult.hasErrors()) {
       bindingResult.getAllErrors().forEach(error -> {
