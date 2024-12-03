@@ -1,5 +1,6 @@
 package dev.wonsama.auth.controller;
 
+import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -40,6 +41,8 @@ public class TokenController {
   @Operation(summary = "Token 검증 수행", description = "전달받은 TOKEN 이 유효한 정보인지 확인한다")
   public CreateTokenVerifyResDto createTokenVerify(@Valid @RequestBody CreateTokenVerifyReqDto dto,
       BindingResult bindingResult) {
+
+    log.info("2.3. /api/auth/token/verify : ", ToStringBuilder.reflectionToString(dto));
 
     if (bindingResult.hasErrors()) {
       bindingResult.getAllErrors().forEach(error -> {
